@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginForm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/icon_dhspkt"
+                android:layout_marginLeft="13dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ĐẠI HỌC ĐÀ NẴNG"
+                    android:fontFamily="sans-serif"
+                    android:textSize="17.4dp"
+                    android:textColor="#0652DD"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="17.3dp"
+                    android:textColor="#0652DD"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="University of Technology and Education"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="17.3dp"
+                    android:textColor="#EE5A24"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ĐĂNG NHẬP"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#0652DD"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/stroke_footer"
+            android:drawablePadding="20dp"
+            android:hint="Tài khoản"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_user" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/stroke_footer"
+            android:drawablePadding="20dp"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_password"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhớ mật khẩu"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_marginStart="30dp"
+                android:textColorHint="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quên mật khẩu?"
+                android:textSize="18dp"
+                android:layout_marginLeft="90dp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#0652DD"
+            android:text="Đăng nhập"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
