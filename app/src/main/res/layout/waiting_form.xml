@@ -33,27 +33,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Nhóm 7:"
+        android:text="Nhóm 7"
         android:layout_gravity="center"
         android:textSize="23dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="#d63031"
-        android:layout_marginBottom="5dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nguyễn Đăng Khoa"
-        android:layout_gravity="center"
-        android:textSize="23dp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="5dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lưu Văn Đức"
-        android:layout_gravity="center"
-        android:textSize="23dp"
-        android:textColor="@color/black"
         android:layout_marginBottom="5dp"/>
 
 </LinearLayout>

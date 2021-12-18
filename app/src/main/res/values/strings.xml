@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">BTCK_QLDoanPhi</string>
+    <string name="app_name">Quản lí đoàn phí, hội phí</string>
+
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_add">Thêm</string>
+    <string name="nav_list">Thống kê</string>
+    <string name="nav_exit">Thoát</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
 </resources>

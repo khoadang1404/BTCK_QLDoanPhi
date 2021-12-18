@@ -27,7 +27,7 @@ public class LoginForm extends AppCompatActivity {
             public void onClick(View view) {
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("123")){
                     Toast.makeText(LoginForm.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginForm.this, MainActivity.class);
+                    Intent intent = new Intent(LoginForm.this, Add.class);
                     startActivity(intent);
                 }else{
                     Toast.makeText(LoginForm.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
