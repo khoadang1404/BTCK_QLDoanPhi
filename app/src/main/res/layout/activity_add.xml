@@ -10,17 +10,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="25dp">
+        android:padding="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="THÊM SINH VIÊN"
-            android:fontFamily="@font/product_sans_bold"
-            android:textSize="30dp"
-            android:textColor="#0652DD"
-            android:layout_marginTop="20dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgbtnBack"
+                android:background="@color/white"
+                android:src="@drawable/ic_arrow_left_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="THÊM SINH VIÊN"
+                android:textColor="#0652DD"
+                android:textSize="30dp" />
+        </RelativeLayout>
 
         <TextView
             android:layout_marginLeft="3dp"
@@ -39,7 +52,7 @@
             android:singleLine="true"
             android:background="@drawable/border_add"
             android:padding="10dp"
-            android:id="@+id/addLop" />
+            android:id="@+id/addID" />
 
         <TextView
             android:layout_marginLeft="3dp"
@@ -84,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Khoa"
+            android:text="Tình trạng"
             android:textSize="18dp"/>
 
         <EditText
@@ -135,7 +148,4 @@
             android:fontFamily="@font/product_sans_regular"
             android:layout_gravity="center" />
     </LinearLayout>
-
-
-
 </ScrollView>

@@ -6,8 +6,14 @@
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/background_waiting_form.xml" value="0.2703125" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/border_add.xml" value="0.2703125" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/border_add_button.xml" value="0.2703125" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/ic_arrow_left_black_24dp.xml" value="0.2703125" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/ic_them.xml" value="0.2703125" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/ic_thoat.xml" value="0.2703125" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/ic_thongke.xml" value="0.2703125" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/search_main.xml" value="0.2703125" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/drawable/stroke_footer.xml" value="0.2703125" />
-        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_add.xml" value="0.264" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_add.xml" value="0.4" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_file_test_dont_touch.xml" value="0.14492753623188406" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_list_main.xml" value="0.1526268115942029" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_login_form.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -17,6 +23,7 @@
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/layout_header_nav.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/waiting_form.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/menu/menu_nav.xml" value="0.25416666666666665" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
       </map>
     </option>
   </component>
