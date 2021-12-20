@@ -100,22 +100,36 @@
             android:text="Tình trạng"
             android:textSize="18dp"/>
 
-        <EditText
-            android:textSize="18dp"
-            android:fontFamily="@font/product_sans_regular"
+        <RadioGroup
+            android:id="@+id/rbAddFaculty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:singleLine="true"
-            android:background="@drawable/border_add"
-            android:padding="10dp"
-            android:id="@+id/addFaculty" />
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbAddDaNop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đã nộp"
+                android:textSize="18dp"
+                android:checked="true"
+                android:fontFamily="@font/product_sans_regular"/>
+
+            <RadioButton
+                android:id="@+id/rbAddChuaNop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chưa nộp"
+                android:textSize="18dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:layout_marginLeft="120dp"/>
+        </RadioGroup>
+
 
         <TextView
             android:layout_marginLeft="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="Ngày nộp"
             android:textSize="18dp"/>
 
