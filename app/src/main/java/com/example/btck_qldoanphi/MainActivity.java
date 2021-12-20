@@ -11,17 +11,20 @@ import android.widget.Toast;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
+    public static Database database;
+    MaterialButton btnAddSV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView tvLogOut = (TextView) findViewById(R.id.tvLogOut);
-        MaterialButton btnAddSV = (MaterialButton) findViewById(R.id.btnAddSV);
+        btnAddSV = (MaterialButton) findViewById(R.id.btnAddSV);
 
-        Database database = new Database(this, "QuanLy.sqlite", null, 1);
+        database = new Database(this, "QuanLy.sqlite", null, 1);
 
-        database.QueryData("CREATE TABLE IF NOT EXISTS SinhVien(Id INTEGER)");
+        database.QueryData("CREATE TABLE IF NOT EXISTS SinhVien(Id INTEGER PRIMARY KEY AUTOINCREMENT, maSV VARCHAR(13) UNIQUE, " +
+                "tenSV NVARCHAR(100), lopSV VARCHAR(10), tinhTrang NVARCHAR(50), ngayNop VARCHAR(11) NULL)");
 
         btnAddSV.setOnClickListener(new View.OnClickListener() {
             @Override

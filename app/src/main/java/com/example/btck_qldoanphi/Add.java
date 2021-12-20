@@ -13,11 +13,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Add extends AppCompatActivity {
     EditText addID, addName, addClass, addDay, addFaculty;
+    MaterialButton btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +32,13 @@ public class Add extends AppCompatActivity {
         addID = (EditText) findViewById(R.id.addID);
         addName = (EditText) findViewById(R.id.addName);
         addClass = (EditText) findViewById(R.id.addClass);
+        btnAdd = (MaterialButton) findViewById(R.id.btnAdd);
+        ImageButton imgbtnBack = (ImageButton) findViewById(R.id.imgbtnBack);
 //        Calendar calendar1 = Calendar.getInstance();
 //        SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("dd/MM/yyyy");
 //        addDay.setText(simpleDateFormat1.format(calendar1.getTime()));
 
-        ImageButton imgbtnBack = (ImageButton) findViewById(R.id.imgbtnBack);
+
         imgbtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +67,21 @@ public class Add extends AppCompatActivity {
                     ChonNgay();
                 }
                 //ChonNgay();
+            }
+        });
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.database.INSERT_SINHVIEN(
+                        addID.getText().toString().trim(),
+                        addName.getText().toString().trim(),
+                        addClass.getText().toString().trim(),
+                        addFaculty.getText().toString().trim(),
+                        addDay.getText().toString().trim()
+                );
+                Toast.makeText(Add.this, "Đã thêm thành công", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Add.this, MainActivity.class));
             }
         });
     }
