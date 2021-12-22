@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 import java.text.SimpleDateFormat;
@@ -84,13 +86,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void DialogXoaCongViec(String tenSV, int Id){
-        AlertDialog.Builder dialogXoaCongViec = new AlertDialog.Builder(this);
-        dialogXoaCongViec.setMessage("Bạn muốn xóa sinh viên " + tenSV + " ?");
-        dialogXoaCongViec.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_xoa);
+        TextView tvDelete;
+        MaterialButton btnDelete, btnCancel;
+
+        tvDelete = (TextView) dialog.findViewById(R.id.tvDelete);
+        btnDelete = (MaterialButton) dialog.findViewById(R.id.btnDelete);
+        btnCancel = (MaterialButton) dialog.findViewById(R.id.btnCancel);
+
+        tvDelete.setText("Xóa sinh viên: " + tenSV + "?");
+        btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 database.QueryData("DELETE FROM SinhVien WHERE Id = '"+ Id +"'");
                 Toast.makeText(MainActivity.this, "Xóa thành công sinh viên " + tenSV, Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+
+                //get data
                 Cursor cursor = database.GetData("SELECT * FROM SinhVien");
                 arraySinhVien.clear();
                 while (cursor.moveToNext()){
@@ -106,15 +127,8 @@ public class MainActivity extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
         });
+        dialog.show();
 
-        dialogXoaCongViec.setNegativeButton("Không", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-
-            }
-        });
-
-        dialogXoaCongViec.show();
     }
 
     public void DialogSuaCongViec(String maSV, String tenSV, String lopSV, String tinhTrang, String ngayNop, int Id){
