@@ -6,16 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 
 public class SinhVienAdapter extends BaseAdapter {
 
-    private Context context;
+    private MainActivity context;
     private int layout;
     private List<QLTPSinhVien> qltpSinhVienList;
 
-    public SinhVienAdapter(Context context, int layout, List<QLTPSinhVien> qltpSinhVienList) {
+    public SinhVienAdapter(MainActivity context, int layout, List<QLTPSinhVien> qltpSinhVienList) {
         this.context = context;
         this.layout = layout;
         this.qltpSinhVienList = qltpSinhVienList;
@@ -38,6 +41,7 @@ public class SinhVienAdapter extends BaseAdapter {
 
     private class ViewHolder{
         TextView tvMaSV, tvTenSV, tvLopSV, tvTinhTrang, tvNgayNop;
+        MaterialButton btnFix, btnDelete;
     }
 
     @Override
@@ -54,6 +58,8 @@ public class SinhVienAdapter extends BaseAdapter {
             holder.tvLopSV = (TextView) view.findViewById(R.id.tvLopSV);
             holder.tvTinhTrang = (TextView) view.findViewById(R.id.tvTinhTrang);
             holder.tvNgayNop = (TextView) view.findViewById(R.id.tvNgayNop);
+            holder.btnFix = (MaterialButton) view.findViewById(R.id.btnFix);
+            holder.btnDelete = (MaterialButton) view.findViewById(R.id.btnDelete);
             view.setTag(holder);
         }else{
             holder = (ViewHolder) view.getTag();
@@ -65,6 +71,21 @@ public class SinhVienAdapter extends BaseAdapter {
         holder.tvLopSV.setText("Lớp: " + qltpSinhVien.getLopSV());
         holder.tvTinhTrang.setText(qltpSinhVien.getTinhTrang());
         holder.tvNgayNop.setText("Ngày nộp: " + qltpSinhVien.getNgayNop());
+
+        //bắt sự kiện xóa & sửa
+        holder.btnFix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.DialogSuaCongViec(qltpSinhVien.getMaSV(), qltpSinhVien.getTenSV(), qltpSinhVien.getLopSV(), qltpSinhVien.getTinhTrang(),qltpSinhVien.getNgayNop(), qltpSinhVien.getId());
+            }
+        });
+
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.DialogXoaCongViec(qltpSinhVien.getTenSV(), qltpSinhVien.getId());
+            }
+        });
 
         return view;
     }

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="660dp"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="SỬA THÔNG TIN"
+            android:textColor="#0652DD"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mã sinh viên"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:textSize="18dp"
+        android:fontFamily="@font/product_sans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:background="@drawable/border_add"
+        android:padding="10dp"
+        android:id="@+id/fix_addID" />
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tên sinh viên"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:textSize="18dp"
+        android:fontFamily="@font/product_sans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:background="@drawable/border_add"
+        android:padding="10dp"
+        android:id="@+id/fix_addName" />
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Lớp"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:textSize="18dp"
+        android:fontFamily="@font/product_sans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:background="@drawable/border_add"
+        android:padding="10dp"
+        android:id="@+id/fix_addClass" />
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tình trạng"
+        android:textSize="18dp"/>
+
+    <RadioGroup
+        android:id="@+id/fix_rbAddFaculty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/fix_rbAddDaNop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đã nộp"
+            android:textSize="18dp"
+            android:checked="true"
+            android:fontFamily="@font/product_sans_regular"/>
+
+        <RadioButton
+            android:id="@+id/fix_rbAddChuaNop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chưa nộp"
+            android:textSize="18dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:layout_marginLeft="90dp"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Ngày nộp"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:textSize="18dp"
+        android:fontFamily="@font/product_sans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:background="@drawable/border_add"
+        android:padding="10dp"
+        android:id="@+id/fix_addDay" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fix_btnAdd"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#0652DD"
+            android:text="Sửa"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:layout_gravity="center" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fix_btnCancel"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#0652DD"
+            android:text="HỦY"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:fontFamily="@font/product_sans_regular"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>
