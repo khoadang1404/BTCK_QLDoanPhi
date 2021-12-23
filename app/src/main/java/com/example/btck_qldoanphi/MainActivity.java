@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     ListView listviewSV;
     ArrayList<QLTPSinhVien> arraySinhVien;
     SinhVienAdapter adapter;
+    MaterialButton btnSearch;
+    EditText edtSearch;
     //Dialog dialog = new Dialog(this);
 
     @Override
@@ -81,6 +83,48 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, LoginForm.class);
                 startActivity(intent);
+            }
+        });
+
+        btnSearch = (MaterialButton) findViewById(R.id.btnSearch);
+        edtSearch = (EditText) findViewById(R.id.edtSearch);
+
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!edtSearch.getText().toString().equals("")){
+                    Cursor cursor = database.GetData("SELECT * FROM SinhVien WHERE tenSV LIKE '%"+ edtSearch.getText().toString().trim() +"%' " +
+                            "OR maSV LIKE '%"+ edtSearch.getText().toString().trim() +"%'");
+                    arraySinhVien.clear();
+                    while (cursor.moveToNext()){
+                        arraySinhVien.add(new QLTPSinhVien(
+                                cursor.getInt(0),
+                                cursor.getString(1),
+                                cursor.getString(2),
+                                cursor.getString(3),
+                                cursor.getString(4),
+                                cursor.getString(5)
+                        ));
+                    }
+                    edtSearch.setText("");
+                    adapter.notifyDataSetChanged();
+                    //edtSearch.getText().toString().equals("");
+                }else{
+                    Cursor cursor = database.GetData("SELECT * FROM SinhVien");
+                    arraySinhVien.clear();
+                    while (cursor.moveToNext()){
+                        arraySinhVien.add(new QLTPSinhVien(
+                                cursor.getInt(0),
+                                cursor.getString(1),
+                                cursor.getString(2),
+                                cursor.getString(3),
+                                cursor.getString(4),
+                                cursor.getString(5)
+                        ));
+                    }
+                    adapter.notifyDataSetChanged();
+                    Toast.makeText(MainActivity.this, "Vui lòng nhập mã hoặc tên sinh viên", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
