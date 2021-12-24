@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginForm"
+    tools:context=".RegisterForm"
     android:background="#fcfafa">
 
     <LinearLayout
@@ -12,54 +12,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/icon_dhspkt" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ĐẠI HỌC ĐÀ NẴNG"
-                    android:fontFamily="@font/product_sans_regular"
-                    android:textSize="17.4dp"
-                    android:textColor="#0652DD"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT"
-                    android:fontFamily="@font/product_sans_bold"
-                    android:textSize="17.3dp"
-                    android:textColor="#0652DD"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="University of Technology and Education"
-                    android:fontFamily="@font/product_sans_regular"
-                    android:textSize="17.3dp"
-                    android:textColor="#EE5A24"/>
-            </LinearLayout>
-        </LinearLayout>
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/icon_dhspkt"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ĐĂNG NHẬP"
+            android:text="ĐĂNG KÝ"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="20dp"
             android:textSize="30dp"
             android:fontFamily="@font/product_sans_bold"
             android:textColor="#0652DD"
@@ -100,42 +65,36 @@
             android:singleLine="true"
             android:fontFamily="@font/product_sans_regular"/>
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/repassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/stroke_footer"
+            android:drawablePadding="20dp"
+            android:hint="Xác nhận mật khẩu"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_password"
+            android:singleLine="true"
+            android:fontFamily="@font/product_sans_regular"/>
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nhớ mật khẩu"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:layout_marginStart="30dp"
-                android:textColorHint="@color/black"
-                android:fontFamily="@font/product_sans_regular"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quên mật khẩu?"
-                android:textSize="17dp"
-                android:layout_marginLeft="90dp"
-                android:textColor="#d63031"
-                android:fontFamily="@font/product_sans_regular" />
-        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRegister"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="#0652DD"
-            android:text="Đăng nhập"
+            android:text="ĐĂNG KÝ"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:paddingBottom="10dp"
@@ -151,20 +110,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chưa có tài khoản? "
+                android:text="Đã có tài khoản? "
                 android:fontFamily="@font/product_sans_regular"
                 android:textSize="20dp"/>
 
             <TextView
-                android:id="@+id/tvtoRegisterForm"
+                android:id="@+id/tvbacktoLoginForm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đăng ký"
+                android:text="Đăng nhập"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="20dp"
                 android:textColor="#d63031"/>
         </LinearLayout>
-
     </LinearLayout>
 
 </RelativeLayout>

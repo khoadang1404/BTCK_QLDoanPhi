@@ -17,6 +17,7 @@
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_list_main.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_login_form.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/activity_register_form.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/dialog_sua.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/dialog_xoa.xml" value="0.264" />
         <entry key="..\:/BT_LTDD/BTCK_QLDoanPhi/app/src/main/res/layout/dong_sinh_vien.xml" value="0.4" />
@@ -35,5 +36,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>

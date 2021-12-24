@@ -12,7 +12,11 @@ import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
+import org.w3c.dom.Text;
+
 public class LoginForm extends AppCompatActivity {
+
+    DBHelper myDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +26,37 @@ public class LoginForm extends AppCompatActivity {
         MaterialButton btnLogin = (MaterialButton) findViewById(R.id.btnLogin);
         EditText username = (EditText) findViewById(R.id.username);
         EditText password = (EditText) findViewById(R.id.password);
+        TextView tvtoRegisterForm = (TextView) findViewById(R.id.tvtoRegisterForm);
+
+        myDB = new DBHelper(this);
+
+        tvtoRegisterForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), RegisterForm.class);
+                startActivity(intent);
+            }
+        });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(username.getText().toString().equals("admin") && password.getText().toString().equals("123")){
-                    Toast.makeText(LoginForm.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginForm.this, MainActivity.class);
-                    startActivity(intent);
-                }else{
-                    Toast.makeText(LoginForm.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
-                }
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
 
+                if(user.equals("") || pass.equals("")){
+                    Toast.makeText(LoginForm.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                }else{
+                    Boolean result = myDB.checkusernamePassword(user, pass);
+                    if(result == true){
+                        Toast.makeText(LoginForm.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }else{
+                        Toast.makeText(LoginForm.this, "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
     }
